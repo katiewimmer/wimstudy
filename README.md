@@ -1,10 +1,10 @@
 # WimStudy
 
-WimStudy is revolutionary study aid that provides creative and easily accessible tools to the user.
-Designed to maintain focus, set attainable goals, designate time towards specifc taks and organize various commitments.
+WimStudy is a revolutionary study aid that provides creative and easily accessible tools to the user.
+Designed to maintain focus, set attainable goals, designate time towards specifc taks, and organize various commitments.
 
 The format will seek to provide the user with a dashboard that will cater to the needs of a specifc student, 
-their engagements, their productivity levels etc. by collecting data upon each entry. When opened, Wim Study
+their engagements, their productivity levels etc. by collecting data upon each entry. When opened, WimStudy
 will inquire as to how much time is available and which task category the user would like to tackle. It will then 
 recommend a timer feature and highlight a task. This entry can also be opted out of by the user to allow for a
 freestyle study approach.
