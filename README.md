@@ -5,8 +5,9 @@ Designed to maintain focus, set attainable goals, designate time towards specifc
 
 The format will seek to provide the user with a dashboard that will cater to the needs of a specifc studnet, 
 their engagements, their productivity levels etc. by collecting data upon each entry. When opened, Wim Study
-will inquire as to how much time is available, which subject the user would like to tackle, how apt they are 
-to doing challenging work and other information that might guide the studying experience. 
+will inquire as to how much time is available and which task category the user would like to tackle. It will then 
+recommend a timer feature and highlight a task. This entry can also be opted out of by the user to allow for a
+fresstyle study approach.
 
 The dashboard will include a timer, a task list and a schedule. The timer can be easily manipulated, but can 
 also be set to the user's desired intervals. Some recommended templates will also be provided. The task list
