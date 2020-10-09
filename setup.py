@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="whichtok", 
+    name="wimstudy", 
     version="0.0.1",
-    author="Sarah Chen",
-    author_email="sarahlc888@gmail.com",
-    description="Library for TikTok graph analysis",
+    author="Katie Wimmer",
+    author_email="krwim78@gmail.com",
+    description="Library for study tool",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/sarahlc888/whichtok",
+    url="https://github.com/katiewimmer/wimstudy",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
