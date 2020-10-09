@@ -1,6 +1,6 @@
-# Wim Study
+# WimStudy
 
-Wim Study is revolutionary study aid that provies creative and easily accessible tools to the user.
+WimStudy is revolutionary study aid that provies creative and easily accessible tools to the user.
 Designed to maintain focus, set attainable goals, designate time towards specifc taks and organize various commitments.
 
 The format will seek to provide the user with a dashboard that will cater to the needs of a specifc studnet, 
