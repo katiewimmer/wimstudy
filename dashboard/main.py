@@ -1,7 +1,7 @@
 
 def run_dashboard():
   '''
-  Will open and display the three tools
+  Will open and allow access to the three tools
   '''
   greeting()
 
@@ -16,10 +16,32 @@ def greeting():
     print("Please choose a task: /n")
     # show_tasks()
   
+  def get_action():
+
+    need_task = input("Do you want to select a specific task? /n")
+
+    if need_task.lower() in ['n', 'no']:
+        print("Fantastic, lets get started!")
+        study()
+        exit()
+      elif need.task.lower() in ['y', 'yes']:
+        recommend_task()
+    else:
+        print("Please answer yes or no")
+        get_action()
+  def recommend_task
+  '''
+    Need to print the tasks with numbers than allow the user to select a 
+    specific task by entering a number
+  '''
+#    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
+#    for x in tasks
+
+def study():
   
 #def show_tasks():
    
-#   get_tasks()
+  #returns the list of stored tasks
 
 if __name__ == "__main__":
     run_dashboard()
