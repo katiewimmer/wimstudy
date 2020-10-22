@@ -15,3 +15,11 @@ will contain the various tasks that need to be accomplished. The items will need
 can include a description, a due date and be categorized. The schedule will include the items on the task list
 that contain a due date and any other events that the user wants to enter. The schedule aims to be visually
 appealing and easy to observe. 
+
+# Needed Contributions
+
+- Any GUI help to make the dashboard more appealing
+  - Currently operates through just text output
+- Creating a timer that can count down in real time
+  - A GUI contribution would be most appreciated for this function
+- helping to improve the Syntax of python code to allow for bug free runs
