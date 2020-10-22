@@ -1,5 +1,5 @@
 
-
+class task_list(Dashboard)
 
 def __init__(self, name, time, category):
     self.name = name
