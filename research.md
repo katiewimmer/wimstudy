@@ -15,7 +15,16 @@
         - Work/Study
     Break for 15 Minutes
     Repeat as needed
-
+    
+## The Abby Method
+    Timer for 30
+        -Work/Study
+    Break for 5
+    Repeat x2
+    Timer for 60 minutes
+        -Work/study
+    Break for 30
+    
 ## Work-Based Breaks
     Complete an assignment
     Break for 15 minutes
@@ -33,3 +42,4 @@
 ### Sources:
 https://learningcommons.ubc.ca/the-pomodoro-technique-study-more-efficiently-take-more-breaks/
 https://www.unh.edu/healthyunh/blog/2012/01/brain-break-how-study-smarter
+The observed study habbits of Abby Lamontagne
