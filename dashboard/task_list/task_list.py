@@ -5,6 +5,10 @@ def __init__(self, name, time, category):
     self.name = name
     self.time = time
     self.category = category
+    make_task_list(self)
+    
+def make_task_list(*task):
+    task_list = [task]
 
 def display_full_task(self)
     print ("Name: " + str(self.name) + /n)
@@ -18,11 +22,9 @@ def get_time():
 def get_catefory:
     return self.category
 
-def make_task_list(*task):
-    
 def get_tasks
     print("The available tasks are:")
-    print(tasks)
+    print(task_list)
 
 
 
