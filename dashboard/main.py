@@ -34,6 +34,9 @@ def greeting():
     Need to print the tasks with numbers than allow the user to select a 
     specific task by entering a number
   '''
+    for x in task_list
+      display_full_task(x)
+
 #    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
 #    for x in tasks
 
