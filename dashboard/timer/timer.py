@@ -209,7 +209,10 @@ class Counter(object):
         self.frame.columnconfigure(1, weight=1)
         self.frame.rowconfigure(0, weight=1)
         self.frame.rowconfigure(1, weight=1)
-
+        
+        '''
+        Place to set starting time manually
+        '''
         self.time = 0
         self.MAX = 60*60*60
 
