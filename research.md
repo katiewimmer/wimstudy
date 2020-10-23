@@ -18,13 +18,23 @@
     
 ## The Abby Method
     Timer for 30
-        -Work/Study
+        - Work/Study
     Break for 5
     Repeat x2
     Timer for 60 minutes
         -Work/study
     Break for 30
+
+## The Koki Method
+    Timer for 360 Minutes
+        - Remain idle for 340 minutes
+    Work frantically for remaining 20
     
+## The Sima Method
+    Timer for 120 Minutes
+        - Work/Study
+    No breaks
+ 
 ## Work-Based Breaks
     Complete an assignment
     Break for 15 minutes
@@ -41,5 +51,7 @@
 
 ### Sources:
 https://learningcommons.ubc.ca/the-pomodoro-technique-study-more-efficiently-take-more-breaks/
-https://www.unh.edu/healthyunh/blog/2012/01/brain-break-how-study-smarter
-The observed study habbits of Abby Lamontagne
+https://www.unh.edu/healthyunh/blog/2012/01/brain-break-how-study-smarter  
+The observed study habbits of Abby Lamontagne  
+The observed study habbits of Koki Kapoor  
+The observed study habbits of Sima Shmuylovich  
