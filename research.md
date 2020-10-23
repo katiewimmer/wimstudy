@@ -52,6 +52,6 @@
 ### Sources:
 https://learningcommons.ubc.ca/the-pomodoro-technique-study-more-efficiently-take-more-breaks/
 https://www.unh.edu/healthyunh/blog/2012/01/brain-break-how-study-smarter  
-The observed study habbits of Abby Lamontagne
+The observed study habbits of Abby Lamontagne  
 The observed study habbits of Koki Kapoor  
 The observed study habbits of Sima Shmuylovich  
