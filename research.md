@@ -24,6 +24,11 @@
     Timer for 60 minutes
         -Work/study
     Break for 30
+
+## The Koki Method
+    Timer for 360 Minutes
+        - Remain idle for 340 minutes
+    Work frantically for remaining 20
     
 ## Work-Based Breaks
     Complete an assignment
