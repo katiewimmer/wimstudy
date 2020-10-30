@@ -15,7 +15,7 @@ def greeting():
     time = int(input ("How much time do you have? In minutes: \n"))
     if time > 0:
       print("Please choose a task: \n")
-      # show_tasks()
+      task_list.get_tasks()
   else:
     print("There was an error with your input. Please try again!\n")
     greeting()
@@ -36,15 +36,17 @@ def greeting():
         print("Please answer yes or no.\n")
         get_action()
         
-  def recommend_task
+ # def recommend_task
   '''
     Need to print the tasks with numbers than allow the user to select a 
     specific task by entering a number
   '''
-    for x in task_list
+ #   for x in task_list
 
-      display_full_task(x)
+ #      display_full_task(x)
 
+#    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
+#    for x in tasks
 #    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
 #    for x in tasks
 
