@@ -36,15 +36,17 @@ def greeting():
         print("Please answer yes or no.\n")
         get_action()
         
-  def recommend_task
+ # def recommend_task
   '''
     Need to print the tasks with numbers than allow the user to select a 
     specific task by entering a number
   '''
-    for x in task_list
+ #   for x in task_list
 
-      display_full_task(x)
+ #      display_full_task(x)
 
+#    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
+#    for x in tasks
 #    task_num = input(f' "Please enter the number of the task you would like: /n {get_tasks()}'')
 #    for x in tasks
 
