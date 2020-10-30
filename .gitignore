@@ -1,3 +1,5 @@
 
-node_modules/
+# Personal Files to Ignore
+
 .DS_Store
+mode_modules/
