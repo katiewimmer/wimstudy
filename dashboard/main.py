@@ -15,7 +15,7 @@ def greeting():
     time = int(input ("How much time do you have? In minutes: \n"))
     if time > 0:
       print("Please choose a task: \n")
-      # show_tasks()
+      task_list.get_tasks()
   else:
     print("There was an error with your input. Please try again!\n")
     greeting()
