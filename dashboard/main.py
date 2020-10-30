@@ -4,7 +4,7 @@ def run_dashboard():
   '''
   Will open and allow access to the two tools
   '''
-  greeting()
+  get_action()
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
 def greeting():
@@ -27,7 +27,7 @@ def greeting():
 
     if need_task.lower() in ['n', 'no']:
         print("Fantastic, lets get started!\n")
-        study()
+        greeting()
         exit()
     elif need_task.lower() in ['y', 'yes']:
         name = input("What is the name of the task? \n")
