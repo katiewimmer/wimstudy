@@ -1,10 +1,7 @@
 import task_list
 #Uncoded
 def run_dashboard():
-  '''
-  Will open and allow access to the two tools
-  '''
-  get_action()
+  get_action() # will allow for new tasks to be entered
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
 def greeting():
@@ -21,15 +18,15 @@ def greeting():
     greeting()
   
   # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
-  def get_action():
+  def get_action(): 
 
     need_task = input("Do you want to add a new task? \n")
 
-    if need_task.lower() in ['n', 'no']:
+    if need_task.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
         print("Fantastic, lets get started!\n")
         greeting()
         exit()
-    elif need_task.lower() in ['y', 'yes']:
+    elif need_task.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
         name = input("What is the name of the task? \n")
         time = input("How long do you think the task will take? (in minutes)? \n")
         category = input("What class is this for? \n")
