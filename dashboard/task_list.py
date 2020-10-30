@@ -21,7 +21,7 @@ class task_list:
 
 def add_task_to_list(task)
     list_of_tasks = []
-    list.append(task)
+    list_of_tasks.append(task)
 '''
 for x in range(0, num_tasks):
     n = input("\ninput name: \n") #Customize Questions
