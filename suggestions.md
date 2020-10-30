@@ -23,4 +23,4 @@ Here are some important terms to know when using tkinter:
 
 If you don't understand them after watching the YouTube video, I would recommend to either conduct some research on them or to contact me <https://github.com/sshmuylovich> before starting to code.
 
-I have also created the file wimstudy_gui.py to help start your GUI journey!
+I have also created the file [wimstudy_gui.py](https://github.com/sshmuylovich/wimstudy/blob/main/dashboard/wimstudy_gui.py) to help start your GUI journey!
