@@ -1,8 +1,8 @@
-
+import task_list
 #Uncoded
 def run_dashboard():
   '''
-  Will open and allow access to the three tools
+  Will open and allow access to the two tools
   '''
   greeting()
 
@@ -15,23 +15,26 @@ def greeting():
     time = int(input ("How much time do you have? In minutes: \n"))
     if time > 0:
       print("Please choose a task: \n")
-      task_list.get_tasks()
+      task_list.print_tasks()
   else:
     print("There was an error with your input. Please try again!\n")
     greeting()
   
-  
   # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
   def get_action():
 
-    need_task = input("Do you want to select a specific task? \n")
+    need_task = input("Do you want to add a new task? \n")
 
     if need_task.lower() in ['n', 'no']:
         print("Fantastic, lets get started!\n")
         study()
         exit()
     elif need_task.lower() in ['y', 'yes']:
-        recommend_task()
+        name = input("What is the name of the task? \n")
+        time = input("How long do you think the task will take? (in minutes)? \n")
+        category = input("What class is this for? \n")
+        add_task_to_list(task_list(name, time, category))
+        get_action()
     else:
         print("Please answer yes or no.\n")
         get_action()
