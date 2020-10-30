@@ -23,3 +23,6 @@ that the user wants to enter. The schedule aims to be visuallyappealing and easy
 - Creating a function that can accomodate the timer inputs
   - Will most likely need to individually code the options
 - Helping to improve the Syntax of python code to allow for bug free runs
+- One option to connect timer.py and main.py is to create a class (for example, dashboard class) and make a timer class a member
+of the dashboard class. So this way, when you show the dashboard, you always get the timer to show as well. So from main.py, you are
+able to access the dashboard and its members, to edit the time on the timer.
