@@ -1,3 +1,4 @@
+encoding=utf8
 import task_list
 #Uncoded
 def run_dashboard():
@@ -6,7 +7,7 @@ def run_dashboard():
   # get_action() # will allow for new tasks to be entered
 
 def print_hello():
-    print("""
+  print("""
 ===================================================================
                             Welcome to
 
@@ -22,7 +23,7 @@ def print_hello():
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
 def greeting():
-
+  
   mood = input (u"\u001b[38;5;105m" + "How productive are you feeling today? On a scale of 1-10: \n" + u"\u001b[0m")
 
   if int(mood) in range(0,10):
