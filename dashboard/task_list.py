@@ -4,12 +4,12 @@ class task_list:
         self.name=name
         self.time=time
         self.category=category
-        
+
     def display_full_task(self):
         print("Name:",str(self.name),"\n")
         print("Time:",str(self.time),"\n")
         print("Category:",str(self.category),"\n")
-    
+
     def get_name(self):
         return self.name
 
@@ -19,9 +19,10 @@ class task_list:
     def get_catefory(self):
         return self.category
 
-num_tasks = int(input(f'How many tasks would you like to create? \n'))
-list_of_tasks = []
-
+def add_task_to_list(task):
+    list_of_tasks = []
+    list_of_tasks.append(task)
+'''
 for x in range(0, num_tasks):
     n = input("\ninput name: \n") #Customize Questions
     t = input("input time: \n")
@@ -32,17 +33,17 @@ for x in range(0, num_tasks):
     list_of_tasks.insert(x, task.name)
 
 print("\nList of Tasks:", list_of_tasks)
-
-## Additional methods that don't have to do with the code when you run it as of now   
-def get_tasks():
+'''
+## Additional methods that don't have to do with the code when you run it as of now
+def print_tasks():
     print("The available tasks are:")
-    print(task_list)
+    for t in list_of_tasks:
+         print(display_full_task(t))
 
 def recommend_task():
     '''
-      Need to print the tasks with numbers than allow the user to select a 
+      Need to print the tasks with numbers than allow the user to select a
       specific task by entering a number
     '''
     for x in range (0, len(task_list)):
       task_list.display_full_task(x)
-
