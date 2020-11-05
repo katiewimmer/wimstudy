@@ -28,9 +28,13 @@ def get_action():
     greeting() #prompts for procductivity and time constraints
     exit()
   elif need.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
-    name = input("What is the name of the task? \n")
-    time = input("How long do you think the task will take? (in minutes)? \n")
-    category = input("What class is this for? \n")
+    name = raw_input("What is the name of the task? \n")
+    if len(name) != 0:
+      time = input("How long do you think the task will take? (in minutes)? \n")
+    if time != 0:
+      category = raw_input("What class is this for? \n")
+    else:
+      print("Please enter a valid phrase or number greater than 0")
     add_task_to_list(task_list(name, time, category))
     get_action()
   else:
