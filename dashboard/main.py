@@ -2,7 +2,7 @@ import task_list
 #Uncoded
 def run_dashboard():
     print_hello() #visually pleasing entry message
-    get_action() #allows for tasks to be entered
+    get_action()
 
 def print_hello():
   print("""
@@ -18,24 +18,24 @@ def print_hello():
 ===================================================================
 """)
 
-  def get_action():
+def get_action():
 
-    need_task = input("Hello, do you want to add a new task to your list? \n")
+  need_task = input ("Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n")
     
-    # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
-    if need_task.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
-        print("Fantastic, lets get started!\n")
-        greeting() #prompts for procductivity and time constraints
-        exit()
-    elif need_task.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
-        name = input("What is the name of the task? \n")
-        time = input("How long do you think the task will take? (in minutes)? \n")
-        category = input("What class is this for? \n")
-        add_task_to_list(task_list(name, time, category))
-        get_action()
-    else:
-        print("Please answer yes or no.\n")
-        get_action()
+  # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
+  if need_task.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
+    print("Fantastic, lets get started!\n")
+    greeting() #prompts for procductivity and time constraints
+    exit()
+  elif need_task.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
+    name = input("What is the name of the task? \n")
+    time = input("How long do you think the task will take? (in minutes)? \n")
+    category = input("What class is this for? \n")
+    add_task_to_list(task_list(name, time, category))
+    get_action()
+  else:
+    print("Please answer yes or no.\n")
+    get_action()
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
 def greeting():
@@ -46,7 +46,7 @@ def greeting():
     time = int(input(u"\u001b[38;5;167m" + "How much time do you have? In minutes: \n" + u"\u001b[0m"))
     if time > 0:
       print("Please choose a task: \n")
-      task_list.print_tasks()
+     # task_list.print_tasks()
   else:
     print("There was an error with your input. Please try again!\n")
     greeting()
