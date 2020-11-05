@@ -20,27 +20,27 @@ def print_hello():
 
 def get_action():
 
-  need_task = input ("Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n")
-    
+  need = raw_input (u"\u001b[38;5;105m" + "Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n" + u"\u001b[0m") 
+  
   # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
-  if need_task.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
-    print("Fantastic, lets get started!\n")
+  if need.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
+    print(u"\u001b[38;5;105m" + "\nFantastic, lets get started!\n" + u"\u001b[0m")
     greeting() #prompts for procductivity and time constraints
     exit()
-  elif need_task.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
+  elif need.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
     name = input("What is the name of the task? \n")
     time = input("How long do you think the task will take? (in minutes)? \n")
     category = input("What class is this for? \n")
     add_task_to_list(task_list(name, time, category))
     get_action()
   else:
-    print("Please answer yes or no.\n")
+    print("Please answer with 'yes' or 'no' \n")
     get_action()
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
 def greeting():
   
-  mood = input (u"\u001b[38;5;105m" + "How productive are you feeling today? On a scale of 1-10: \n" + u"\u001b[0m")
+  mood = input (u"\u001b[38;5;167m" + "How productive are you feeling today? On a scale of 1-10: \n" + u"\u001b[0m")
 
   if int(mood) in range(0,10):
     time = int(input(u"\u001b[38;5;167m" + "How much time do you have? In minutes: \n" + u"\u001b[0m"))
