@@ -1,8 +1,10 @@
 #Uncoded
+from task import task
 
 def run_dashboard():
     print_hello() #visually pleasing entry message
-    get_action()
+    all_tasks = get_tasks()
+    greeting(all_tasks) #prompts for procductivity and time constraints
 
 def print_hello():
   print("""
@@ -18,57 +20,69 @@ def print_hello():
 ===================================================================
 """)
 
-def get_action():
+def get_tasks():
+  """
+  If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
 
-  need = raw_input (u"\u001b[38;5;105m" + "Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n" + u"\u001b[0m") 
-  # If user doesn't answer in the format of [yes, y, no, n], then this method forces the user to enter an appropriate answer and select a task
-  if need.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
-    print(u"\u001b[38;5;105m" + "\nFantastic, lets get started!\n" + u"\u001b[0m")
-    greeting() #prompts for procductivity and time constraints
-    exit()
-  elif need.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
-    name = raw_input("What is the name of the task? \n")
-    if len(name) == 0:
-      print("Please enter a valid name")
-      get_action()
-    time = input("How long do you think the task will take? (in minutes)? \n")
-    if time == 0:
-      print("Please enter a valid time")
-      get_action()
-    category = raw_input("What class is this for? \n")
-    if len(category) == 0:
-      print("Please enter a valid category")
-      get_action()
-    '''
-    NEED TO MAKE OBJECT FROM TASK.PY CLASS
-    new_task = task(name, time, category)
-    list_of_tasks.append(new_task)
-    get_action()
-    '''
-  else:
-    print("Please answer with 'yes' or 'no' \n")
-    get_action()
+  Returns:
+    List[task]: The list of tasks created by the user.
+  """
+  all_tasks = []
+
+  while True:
+    need = raw_input (u"\u001b[38;5;105m" + "Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n" + u"\u001b[0m") 
+
+    if need.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
+      print(u"\u001b[38;5;105m" + "\nFantastic, lets get started!\n" + u"\u001b[0m")
+      return all_tasks
+
+    elif need.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
+      name = raw_input("What is the name of the task? \n")
+      if len(name) == 0:
+        print("Please enter a valid name")
+        continue
+
+      time = input("How long do you think the task will take? (in minutes)? \n")
+      if time == 0:
+        print("Please enter a valid time")
+        continue
+
+      category = raw_input("What class is this for? \n")
+      if len(category) == 0:
+        print("Please enter a valid category")
+        continue
+
+      new_task = task(name, time, category)
+      all_tasks.append(new_task)
+    else:
+      print("Please answer with 'yes' or 'no' \n")
+      continue
 
 # Takes user input about personal productivity. Based on productivity response, user is asked about time commitments. If there is available time, user has to choose a task to complete.""
-def greeting():
+def greeting(all_tasks):
+  """
+  Args:
+    all_tasks (List[task]): The user's tasks
+  """
   
   mood = input (u"\u001b[38;5;167m" + "How productive are you feeling today? On a scale of 1-10: \n" + u"\u001b[0m")
 
-  if int(mood) in range(0,10):
+  if int(mood) in range(1,11):
     time = int(input(u"\u001b[38;5;167m" + "How much time do you have? In minutes: \n" + u"\u001b[0m"))
     if time > 0:
       print("Please choose a task: \n")
-      print_tasks()
+      print_tasks(all_tasks)
+      return
   else:
     print("There was an error with your input. Please try again!\n")
-    greeting()
+    greeting(all_tasks)
 
-def print_tasks(list):
+def print_tasks(list_of_tasks):
   print("The available tasks are: \n")
-  for x in list:
-    print ("TASK: " + x.get_name() + "\n")
-    print ("TIME: " + x.get_time() + "\n")
-    print ("CLASS: " + x.get_category() + "\n")
+  for x in list_of_tasks:
+    print ("TASK: " + x.get_name())
+    print ("TIME: " + str(x.get_time()))
+    print ("CLASS: " + x.get_category() + '\n')
 
 
  # def recommend_task
