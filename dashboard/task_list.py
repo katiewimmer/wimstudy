@@ -1,27 +1,8 @@
-
-class task_list:
-    def __init__(self,name,time,category):
-        self.name=name
-        self.time=time
-        self.category=category
-
-    def display_full_task(self):
-        print("Name:",str(self.name),"\n")
-        print("Time:",str(self.time),"\n")
-        print("Category:",str(self.category),"\n")
-
-    def get_name(self):
-        return self.name
-
-    def get_time(self):
-        return self.time
-
-    def get_catefory(self):
-        return self.category
-
-def add_task_to_list(task):
-    list_of_tasks = []
-    list_of_tasks.append(task)
+def print_tasks():
+    print("The available tasks are:")
+    for t in list_of_tasks:
+         print(display_full_task(t))
+        
 '''
 for x in range(0, num_tasks):
     n = input("\ninput name: \n") #Customize Questions
@@ -35,10 +16,6 @@ for x in range(0, num_tasks):
 print("\nList of Tasks:", list_of_tasks)
 '''
 ## Additional methods that don't have to do with the code when you run it as of now
-def print_tasks():
-    print("The available tasks are:")
-    for t in list_of_tasks:
-         print(display_full_task(t))
 
 def recommend_task():
     '''
