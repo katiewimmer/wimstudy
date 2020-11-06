@@ -30,24 +30,24 @@ def get_tasks():
   all_tasks = []
 
   while True:
-    need = raw_input (u"\u001b[38;5;105m" + "Hello, do you want to add a new task to your list? Answer 'yes' or 'no' \n" + u"\u001b[0m") 
+    need = raw_input (u"\u001b[38;5;105m" + "\nHello, do you want to add a new task to your list? Answer 'yes' or 'no' \n" + u"\u001b[0m") 
 
     if need.lower() in ['n', 'no']: # if no new tasks are added, the study process will begin
       print(u"\u001b[38;5;105m" + "\nFantastic, lets get started!\n" + u"\u001b[0m")
       return all_tasks
 
     elif need.lower() in ['y', 'yes']: # allows for the user to input a task and will at it to a list
-      name = raw_input("What is the name of the task? \n")
+      name = raw_input(u"\u001b[38;5;105m" + "\nWhat is the name of the task? \n" + u"\u001b[0m")
       if len(name) == 0:
         print("Please enter a valid name")
         continue
 
-      time = input("How long do you think the task will take? (in minutes)? \n")
+      time = input( u"\u001b[38;5;105m" + "\nHow long do you think the task will take? (in minutes)? \n" + u"\u001b[0m")
       if time == 0:
         print("Please enter a valid time")
         continue
 
-      category = raw_input("What class is this for? \n")
+      category = raw_input(u"\u001b[38;5;105m" + "\nWhat class is this for?\n" + u"\u001b[0m")
       if len(category) == 0:
         print("Please enter a valid category")
         continue
@@ -70,7 +70,7 @@ def greeting(all_tasks):
   if int(mood) in range(1,11):
     time = int(input(u"\u001b[38;5;167m" + "How much time do you have? In minutes: \n" + u"\u001b[0m"))
     if time > 0:
-      print("Please choose a task: \n")
+      print("\n Please choose a task: \n")
       print_tasks(all_tasks)
       return
   else:
