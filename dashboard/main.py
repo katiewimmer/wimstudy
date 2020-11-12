@@ -72,16 +72,18 @@ def greeting(all_tasks):
     if time > 0:
       print("\n Here are your current tasks: \n")
       print_tasks(all_tasks)
-      need_recommendation = raw_input("\nDo you want to chose a task? \n")
-      if need_recommendation.lower() in ['n', 'no']:
-        select_task(all_tasks)
-      elif need_recommendation.lower() in ['y', 'yes']:
+      need_recommendation = raw_input("\nDo you want to chose a task yourself? \n")
+      if need_recommendation.lower() in ['y', 'yes']:
+        select_task(all_tasks, time, mood)
+      elif need_recommendation.lower() in ['n', 'no']:
         need_pref = raw_input("\nDo you have a prefered class?\n")
         if need_pref.lower() in ['y', 'yes']:
           pref = raw_input("\nWhich class do you prefer?\n")
           recommend_task(all_tasks, time, mood, pref)
+          # study_method(mood, time, recommend_task(all_tasks, time, mood, pref))
         else:
-          recommend_task(all_tasks, time, mood)
+          blank = " "
+          recommend_task(all_tasks, time, mood, blank)
       else:
         print("\nPlease answer yes or no\n")
         greeting(all_tasks)
@@ -100,24 +102,43 @@ def recommend_task(list_of_tasks, time, productivity, class_pref):
   for x in list_of_tasks:
       if x.get_time() == time:
         print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        return x.get_time()
         exit()
       elif class_pref in [x.get_category()]:
         print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        return x.get_time()
       elif x.get_time() < time: 
         print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        return x.get_time()
         exit()
       elif mood > 7 & x.get_time() > time:
         print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        return x.get_time()
       else:
         print("\nNo task to recommend, please manually select")
+        return x.get_time()
         select_task()
 
-def select_task():
+def select_task(list_of_tasks, time, mood):
+  print("\nHere are the availble tasks:\n")
+  print_tasks(list_of_tasks)
+  choice = raw_input("\nEnter the task of your choosing:\n")
+  for x in list_of_tasks:
+    if choice in [x.get_name()]:
+      study_method(mood, time, x.get_time())
+    else:
+      print("\nPlease enter the name of a listed task\n")
+      select_task(list_of_tasks, time, mooo)
 
-  '''
+
+def study_method(mood, time, minutes):
+  print("\nsuccess: " + mood + time + minutes)
+
+
+'''
     Need to print the tasks with numbers than allow the user to select a
     specific task by entering a number
-  '''
+'''
 
 if __name__ == "__main__":
     run_dashboard()
