@@ -18,4 +18,10 @@ class task:
 
     def get_category(self):
         return self.category
+    def set_name(self, name):
+        self.name = name
+    def set_time(self, time):
+        self.time = time
+    def set_category(self, category):
+        self.category = category
 
