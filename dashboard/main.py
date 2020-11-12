@@ -70,8 +70,19 @@ def greeting(all_tasks):
   if int(mood) in range(1,11):
     time = int(input(u"\u001b[38;5;167m" + "How much time do you have? In minutes: \n" + u"\u001b[0m"))
     if time > 0:
-      print("\n Please choose a task: \n")
+      print("\n Here are your current tasks: \n")
       print_tasks(all_tasks)
+      need_recommendation = raw_input("\nDo you want to chose a task? \n")
+      if need_recommendation.lower() in ['n', 'no']:
+        class_preference = raw_input("\nDo you have a prefered class? \n")
+        if class_preference.lower() in ['n','no']:
+          recommend_task(all_tasks, time, mood)
+        elif class_preference.lower() in ['y', 'yes']:
+          pref = raw_input("\nWhat class do you prefer?\n")
+          recommend_task(all_tasks, time, mood, pref)
+        else:
+          print("\nPlease answer yes or no\n")
+          greeting()
       return
   else:
     print("There was an error with your input. Please try again!\n")
@@ -84,8 +95,24 @@ def print_tasks(list_of_tasks):
     print ("TIME: " + str(x.get_time()))
     print ("CLASS: " + x.get_category() + '\n')
 
+def recommend_task(list_of_tasks, time, productivity, class_pref):
+  for x in list_of_tasks:
+      if x.get_time() == time:
+        print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        exit()
+      elif class_pref in [x.get_category()]:
+        print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+      elif x.get_time() < time: 
+        print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+        exit()
+      elif mood > 7 & x.get_time() > time:
+        print("\nHere is the recommended task: \n" + x.get_name() + " for " + x.get_category())
+      else:
+        print("\nNo task to recommend, please manually select")
+        select_task()
 
- # def recommend_task
+def select_task():
+
   '''
     Need to print the tasks with numbers than allow the user to select a
     specific task by entering a number
@@ -94,3 +121,5 @@ def print_tasks(list_of_tasks):
 if __name__ == "__main__":
     run_dashboard()
     list_of_tasks = []
+    time = 0
+    mood = 0
