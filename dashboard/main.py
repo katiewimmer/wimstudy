@@ -74,16 +74,17 @@ def greeting(all_tasks):
       print_tasks(all_tasks)
       need_recommendation = raw_input("\nDo you want to chose a task? \n")
       if need_recommendation.lower() in ['n', 'no']:
-        class_preference = raw_input("\nDo you have a prefered class? \n")
-        if class_preference.lower() in ['n','no']:
-          recommend_task(all_tasks, time, mood)
-        elif class_preference.lower() in ['y', 'yes']:
-          pref = raw_input("\nWhat class do you prefer?\n")
+        select_task(all_tasks)
+      elif need_recommendation.lower() in ['y', 'yes']:
+        need_pref = raw_input("\nDo you have a prefered class?\n")
+        if need_pref.lower() in ['y', 'yes']:
+          pref = raw_input("\nWhich class do you prefer?\n")
           recommend_task(all_tasks, time, mood, pref)
         else:
-          print("\nPlease answer yes or no\n")
-          greeting()
-      return
+          recommend_task(all_tasks, time, mood)
+      else:
+        print("\nPlease answer yes or no\n")
+        greeting(all_tasks)
   else:
     print("There was an error with your input. Please try again!\n")
     greeting(all_tasks)
