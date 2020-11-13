@@ -20,14 +20,29 @@ def recommend_study_strat(mood):
     Feel free to change these bounds, I just sort of did them by how long
     the focus time takes for each method
     '''
-    if 0 <= mood <= 3:
-      return 'Pomodoro Method'
-    elif 3 < mood <= 5:
-      return 'Brain-Break Method'
-    elif 5 < mood <= 8:
-      return 'The Abby Method'
-    elif 8 < mood <= 10:
-      return 'The Sima Method'
+    if time <= 45:
+        if mood <= 3:
+            return 'Brain-Break Method'
+        else:
+            return 'Pomodoro Method'
+    elif time < 120:
+        if mood <= 3:
+            return 'Brain-Break Method'
+        else:
+            return 'The Abby Method'
+    elif 120<=time<360:
+        if mood <= 3:
+            return 'Pomodoro Method'
+        elif 3 < mood < 8:
+            return 'The Abby Method'
+        elif mood >= 8:
+            return 'The Sima Method'
+    elif time>=360:
+        if mood <= 3:
+            return 'The Koki Method'
+        else:
+            return 'Brain-Break Method'
+
 
     
 
